@@ -1,0 +1,140 @@
+<div class="dashboard">
+  <div class="dash-left">
+    <div class="header">
+      <h1>Job Trackr</h1>
+    </div>
+    <div class="dash-user">
+      <h1>Hello, <%= name %>!</h1>
+      <a href="/users/logout" class="logout-btn"
+        ><i class="fas fa-sign-out-alt"></i>Log out</a
+      >
+    </div>
+  </div>
+
+  <div class="dash-right">
+    <div class="dash-right-overview">
+      <div class="overview applied">
+        <h2>Applications</h2>
+        <h4 class="total-applications">0</h4>
+      </div>
+      <div class="overview interv">
+        <h2>Interviews</h2>
+        <h4 class="total-interviews">0</h4>
+      </div>
+      <div class="overview offers">
+        <h2>Offers</h2>
+        <h4 class="total-offers">0</h4>
+      </div>
+      <div class="overview denied">
+        <h2>Denied</h2>
+        <h4 class="total-denied">0</h4>
+      </div>
+    </div>
+    <div class="dash-right-info">
+      <div class="dash-applications">
+        <div class="application-container">
+          <div class="application-header">
+            <h1 class="application-title">Applications</h1>
+
+            <button
+              class="modal-btn add-btn"
+              data-modal="add-modal"
+              onclick="OpenAddModal()"
+            >
+              <i class="fas fa-plus"></i> Job
+            </button>
+          </div>
+
+          <div class="row-title">
+            <div></div>
+            <h2 class="title">Position</h2>
+            <h2 class="title">Company</h2>
+            <h2 class="title">Status</h2>
+          </div>
+          <% jobs.forEach(function(job){ %>
+          <div class="row" id="<%=job._id%>">
+            <li class="job-color"></li>
+            <li class="job-position"><%=job.position%></li>
+            <li class="job-company"><%=job.company%></li>
+            <li class="job-status"><%=job.status%></li>
+
+            <div class="job-links">
+              <button
+                class="modal-btn edit-btn fas fa-edit"
+                value="<%=job._id%>"
+                data-modal="edit-modal"
+              ></button>
+              <button
+                class="delete-job-btn fas fa-times-circle"
+                value="<%=job._id%>"
+                onclick="DeleteJob(this.value)"
+              ></button>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+      <div class="dash-summary">
+        <div class="dash-summary-container">
+          <div class="summary-header">
+            <h1 class="summary-title">
+              Summary
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="add-modal" class="modal">
+  <div class="add-modal-content">
+    <form action="/dashboard" method="POST">
+      <div class="form-group-add">
+        <label for="position">Position</label>
+        <input
+          type="position"
+          id="position"
+          name="position"
+          class="form-control"
+          placeholder="Enter Position Title"
+        />
+      </div>
+      <div class="form-group-add">
+        <label for="company">Company</label>
+        <input
+          type="company"
+          id="company"
+          name="company"
+          class="form-control"
+          placeholder="Enter Company Name"
+        />
+      </div>
+      <button type="submit" class="add">
+        <i class="fas fa-plus"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<div id="edit-modal" class="modal">
+  <div class="edit-modal-content">
+    <form onsubmit="EditJob()" class="editForm">
+      <div class="form-group-edit">
+        <label for="status">Status</label>
+        <select type="status" id="status" name="status" class="form-control">
+          <option value="applied">Applied</option>
+          <option value="interviewed">Interviewed</option>
+          <option value="received offer">Received Offer</option>
+          <option value="denied">Denied</option>
+        </select>
+      </div>
+      <button type="submit" class="edit">
+        <i class="fas fa-plus"></i>
+      </button>
+    </form>
+  </div>
+</div>
+<script src="../public/js/modal.js"></script>
+<script src="../public/js/actions.js"></script>
+<script src="../public/js/overview.js"></script>

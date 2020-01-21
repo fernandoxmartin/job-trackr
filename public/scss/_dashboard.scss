@@ -1,0 +1,343 @@
+.dashboard {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  font-family: "Lato";
+  .dash-left {
+    background: #161616; //#2d0a93;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 20vh;
+      margin: 0 auto;
+      font-size: 25px;
+      color: #6068c0;
+      border-bottom: 1px solid #4a53b3;
+    }
+    .dash-user {
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      h1 {
+        font-family: "Lato";
+        color: #e2dcff;
+      }
+    }
+    .logout-btn {
+      .fas {
+        font-size: 16px;
+      }
+      height: 35px;
+      width: 25%;
+      font-family: "Lato";
+      font-size: 14px;
+      border: 3px solid #e7433d;
+      background: #e4302a;
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: 0.2s all;
+      text-transform: uppercase;
+    }
+  }
+}
+.dash-right {
+  background: #260c72; //#989acc;
+  .dash-right-overview {
+    height: 15vh;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #989acc; //#e6e7ee;
+    @include flex-center(space-around);
+    .overview {
+      height: 80%;
+      width: 100%;
+      font-size: 15px;
+      font-family: "Lato";
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-right: 1px solid #ccc;
+      }
+      .total-applications {
+        color: #371c86;
+        font-size: 20px;
+      }
+      .total-interviews {
+        color: #0000dd;
+        font-size: 20px;
+      }
+      .total-offers {
+        color: #5cb85c;
+        font-size: 20px;
+      }
+      .total-denied {
+        color: #e7433d;
+        font-size: 20px;
+      }
+    }
+  }
+  .dash-right-info {
+    height: 80vh;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    @include flex-center(space-between);
+    .dash-applications {
+      width: 63%;
+      height: 100%;
+      background: #989acc;
+      border-radius: 10px;
+      .application-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .application-header {
+          width: 95%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid rgb(56, 56, 56);
+          .application-title {
+            font-family: "Lato";
+            font-size: 30px;
+            padding: 20px;
+            text-transform: uppercase;
+          }
+
+          .add-btn {
+            background: transparent;
+            height: 40px;
+            width: 10%;
+            color: #fff;
+            margin: 10px;
+            border: 3px solid #4c2fa1;
+            background: #371c86;
+            font-family: "Lato";
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.2s all;
+          }
+        }
+
+        .row-title {
+          width: 95%;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1% 1fr 1fr 1fr 0.5fr;
+          align-content: center;
+          padding-top: 20px;
+          .title {
+            font-family: "Lato";
+            font-size: 15px;
+            font-weight: bolder;
+            color: rgb(58, 58, 58);
+            text-align: center;
+          }
+        }
+        .row {
+          width: 95%;
+          height: 50px;
+          margin: 0 auto;
+          margin-top: 20px;
+          display: grid;
+          grid-template-columns: 1% 1fr 1fr 1fr 0.5fr;
+          align-content: center;
+          box-shadow: 0px 0px 10px rgb(53, 53, 53);
+          border-radius: 5px;
+          background: #e6e7ee;
+          .job-color {
+            background: #371c86;
+          }
+          li {
+            font-family: "Lato";
+            list-style: none;
+            text-transform: lowercase;
+            text-align: center;
+            &::first-letter {
+              text-transform: uppercase;
+            }
+          }
+          .job-links {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .edit-job-btn {
+              color: rgb(139, 139, 139);
+            }
+            .delete-job-btn {
+              color: #e7433d;
+            }
+            button {
+              width: 30%;
+              border: none;
+              cursor: pointer;
+              border-radius: 5px;
+              font-size: 25px;
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+    .dash-summary {
+      width: 35%;
+      height: 100%;
+      background: #989acc;
+      border-radius: 10px;
+      .dash-summary-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .summary-header {
+          width: 95%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .summary-title {
+            width: 95%;
+            margin: 0 auto;
+            font-size: 30px;
+            font-family: "Lato";
+            text-transform: uppercase;
+            padding: 20px;
+            border-bottom: 1px solid rgb(56, 56, 56);
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.add-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 20%;
+  height: 30%;
+  border-radius: 0.5rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    font-family: "Lato";
+    .form-group-add {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100%;
+      width: 100%;
+      label {
+        text-transform: uppercase;
+        font-weight: bolder;
+      }
+      input {
+        border: none;
+        background: #ccc;
+        height: 30%;
+        width: 80%;
+      }
+    }
+    .add {
+      color: #fff;
+      border: 3px solid #4c2fa1;
+      background: #371c86;
+      width: 20%;
+      height: 30%;
+    }
+  }
+}
+
+.edit-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 20%;
+  height: 30%;
+  border-radius: 0.5rem;
+  .editForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    font-family: "Lato";
+    .form-group-edit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 80%;
+      width: 100%;
+      label {
+        text-transform: uppercase;
+        font-weight: bolder;
+      }
+      #status {
+        height: 15%;
+        width: 80%;
+        background: #ccc;
+      }
+    }
+    .edit {
+      color: #fff;
+      border: 3px solid #4c2fa1;
+      background: #371c86;
+      width: 20%;
+      height: 20%;
+    }
+  }
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="content">
+    <div class="inner-content login-content">
+      <div class="title">
+        <h1>Login</h1>
+      </div>
+      <div class="details">
+        <%- include('./partials/messages'); %>
+        <form action="/users/login" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter Password"
+            />
+          </div>
+          <button type="submit" class="btn">
+            Login
+          </button>
+        </form>
+      </div>
+      <div class="redirect">
+        <p>Don't have an account?</p>
+        <a href="/users/register" class="btn2">
+          REGISTER
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
