@@ -1,16 +1,16 @@
 .container {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/home-bg2.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-bg2.jpg");
   background-size: cover;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start; }
   .container .content {
-    background: #161616;
+    background: #252424;
     height: 100vh;
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,70 +25,61 @@
       justify-content: space-around; }
       .container .content .inner-content .title {
         text-align: center;
-        color: #fff;
-        font-family: "Lato"; }
+        color: #fff; }
         .container .content .inner-content .title h1 {
           font-size: 40px; }
-      .container .content .inner-content .details {
+      .container .content .inner-content .form-content {
         width: 70%;
         height: 100%; }
-        .container .content .inner-content .details .auth-success {
+        .container .content .inner-content .form-content .auth-success {
           background: #19c819;
           color: white;
           text-align: center;
-          font-family: "Lato";
           font-size: 14px;
           text-transform: uppercase; }
-        .container .content .inner-content .details form {
+        .container .content .inner-content .form-content form {
           height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-around; }
-          .container .content .inner-content .details form .form-group {
+          .container .content .inner-content .form-content form .form-group {
             display: flex;
             flex-direction: column;
             justify-content: center; }
-            .container .content .inner-content .details form .form-group .auth-error {
+            .container .content .inner-content .form-content form .form-group .auth-error {
               background: #eb5757;
               color: white;
               text-align: center;
-              font-family: "Lato";
               font-size: 14px;
               text-transform: uppercase; }
-            .container .content .inner-content .details form .form-group label {
+            .container .content .inner-content .form-content form .form-group label {
               font-size: 20px;
-              font-family: "Lato";
               font-weight: bolder;
-              color: #4a53b3; }
-            .container .content .inner-content .details form .form-group input {
+              color: #b3813f; }
+            .container .content .inner-content .form-content form .form-group input {
               color: #fff; }
-            .container .content .inner-content .details form .form-group .form-control {
+            .container .content .inner-content .form-content form .form-group .form-control {
               width: 100%;
               height: 50px;
               background: transparent;
               border: none;
               border-bottom: 2px solid #1a1a1a; }
-          .container .content .inner-content .details form .btn {
-            font-family: "Lato";
+          .container .content .inner-content .form-content form .btn {
             text-transform: uppercase;
             margin: 0 auto;
-            background: #2d0a93;
-            height: 40px;
-            width: 150px;
+            background: #b3813f;
+            border: 3px solid #926934;
+            height: 35px;
+            width: 120px;
             font-size: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             text-decoration: none;
-            border: none;
             border-radius: 5px;
             color: #fff;
-            cursor: pointer;
-            transition: 0.2s; }
-            .container .content .inner-content .details form .btn:hover {
-              background: #2d0a93;
-              border: 3px solid #4c2fa1; }
+            cursor: pointer; }
       .container .content .inner-content .redirect {
         width: 60%;
         display: flex;
@@ -97,24 +88,38 @@
         justify-content: center; }
         .container .content .inner-content .redirect p {
           font-size: 14px;
-          font-family: "Lato"; }
+          color: #fff; }
         .container .content .inner-content .redirect .btn2 {
           text-decoration: none;
           font-weight: bolder;
           color: #646464; }
-    .container .content .login-content {
+    .container .content .login-container {
       height: 50%; }
-    .container .content .register-content {
+    .container .content .register-container {
       height: 70%; }
+  .container .details {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 auto;
+    height: 25%; }
+    .container .details .details-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .container .details .details-content .details-list {
+        list-style: none; }
+        .container .details .details-content .details-list li {
+          padding-bottom: 15px;
+          font-size: 20px; }
 
 .dashboard {
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 20% 80%;
-  font-family: "Lato"; }
+  grid-template-columns: 25% 75%; }
   .dashboard .dash-left {
-    background: #161616; }
+    background: #252424; }
     .dashboard .dash-left .header {
       display: flex;
       align-items: center;
@@ -123,8 +128,8 @@
       height: 20vh;
       margin: 0 auto;
       font-size: 25px;
-      color: #6068c0;
-      border-bottom: 1px solid #4a53b3; }
+      color: #b3813f;
+      border-bottom: 1px solid #b3813f; }
     .dashboard .dash-left .dash-user {
       height: 20%;
       display: flex;
@@ -132,12 +137,10 @@
       justify-content: space-around;
       align-items: center; }
       .dashboard .dash-left .dash-user h1 {
-        font-family: "Lato";
-        color: #e2dcff; }
+        color: #d6cec3; }
     .dashboard .dash-left .logout-btn {
       height: 35px;
       width: 25%;
-      font-family: "Lato";
       font-size: 14px;
       border: 3px solid #e7433d;
       background: #e4302a;
@@ -152,14 +155,14 @@
         font-size: 16px; }
 
 .dash-right {
-  background: #260c72; }
+  background: #ebebeb; }
   .dash-right .dash-right-overview {
     height: 15vh;
     width: 95%;
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 10px;
-    background: #989acc;
+    background: #c4c4c4;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -168,24 +171,23 @@
       height: 80%;
       width: 100%;
       font-size: 15px;
-      font-family: "Lato";
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; }
       .dash-right .dash-right-overview .overview:nth-child(1), .dash-right .dash-right-overview .overview:nth-child(2), .dash-right .dash-right-overview .overview:nth-child(3) {
-        border-right: 1px solid #ccc; }
+        border-right: 1px solid #787878; }
       .dash-right .dash-right-overview .overview .total-applications {
-        color: #371c86;
+        color: #b3813f;
         font-size: 20px; }
       .dash-right .dash-right-overview .overview .total-interviews {
-        color: #0000dd;
+        color: #b3813f;
         font-size: 20px; }
       .dash-right .dash-right-overview .overview .total-offers {
-        color: #5cb85c;
+        color: #b3813f;
         font-size: 20px; }
       .dash-right .dash-right-overview .overview .total-denied {
-        color: #e7433d;
+        color: #b3813f;
         font-size: 20px; }
   .dash-right .dash-right-info {
     height: 80vh;
@@ -199,7 +201,7 @@
     .dash-right .dash-right-info .dash-applications {
       width: 63%;
       height: 100%;
-      background: #989acc;
+      background: #c4c4c4;
       border-radius: 10px; }
       .dash-right .dash-right-info .dash-applications .application-container {
         height: 100%;
@@ -214,9 +216,8 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid #383838; }
+          border-bottom: 1px solid #787878; }
           .dash-right .dash-right-info .dash-applications .application-container .application-header .application-title {
-            font-family: "Lato";
             font-size: 30px;
             padding: 20px;
             text-transform: uppercase; }
@@ -226,9 +227,8 @@
             width: 10%;
             color: #fff;
             margin: 10px;
-            border: 3px solid #4c2fa1;
-            background: #371c86;
-            font-family: "Lato";
+            border: 3px solid #a37b46;
+            background: #b3813f;
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 1px;
@@ -243,7 +243,6 @@
           align-content: center;
           padding-top: 20px; }
           .dash-right .dash-right-info .dash-applications .application-container .row-title .title {
-            font-family: "Lato";
             font-size: 15px;
             font-weight: bolder;
             color: #3a3a3a;
@@ -260,9 +259,9 @@
           border-radius: 5px;
           background: #e6e7ee; }
           .dash-right .dash-right-info .dash-applications .application-container .row .job-color {
-            background: #371c86; }
+            background: #b3813f;
+            width: 100%; }
           .dash-right .dash-right-info .dash-applications .application-container .row li {
-            font-family: "Lato";
             list-style: none;
             text-transform: lowercase;
             text-align: center; }
@@ -286,7 +285,7 @@
     .dash-right .dash-right-info .dash-summary {
       width: 35%;
       height: 100%;
-      background: #989acc;
+      background: #c4c4c4;
       border-radius: 10px; }
       .dash-right .dash-right-info .dash-summary .dash-summary-container {
         width: 100%;
@@ -299,15 +298,15 @@
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          align-items: center; }
+          align-items: center;
+          padding-bottom: 50px; }
           .dash-right .dash-right-info .dash-summary .dash-summary-container .summary-header .summary-title {
             width: 95%;
             margin: 0 auto;
             font-size: 30px;
-            font-family: "Lato";
             text-transform: uppercase;
             padding: 20px;
-            border-bottom: 1px solid #383838; }
+            border-bottom: 1px solid #787878; }
 
 .modal {
   position: fixed;
@@ -336,8 +335,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
-    font-family: "Lato"; }
+    height: 100%; }
     .add-modal-content form .form-group-add {
       display: flex;
       flex-direction: column;
@@ -355,10 +353,11 @@
         width: 80%; }
     .add-modal-content form .add {
       color: #fff;
-      border: 3px solid #4c2fa1;
-      background: #371c86;
+      border: 3px solid #a37b46;
+      background: #b3813f;
       width: 20%;
-      height: 30%; }
+      height: 30%;
+      cursor: pointer; }
 
 .edit-modal-content {
   position: absolute;
@@ -375,8 +374,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
-    font-family: "Lato"; }
+    height: 100%; }
     .edit-modal-content .editForm .form-group-edit {
       display: flex;
       flex-direction: column;
@@ -393,10 +391,11 @@
         background: #ccc; }
     .edit-modal-content .editForm .edit {
       color: #fff;
-      border: 3px solid #4c2fa1;
-      background: #371c86;
+      border: 3px solid #a37b46;
+      background: #b3813f;
       width: 20%;
-      height: 20%; }
+      height: 20%;
+      cursor: pointer; }
 
 .show-modal {
   opacity: 1;
@@ -407,21 +406,22 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Lato"; }
 
 .home {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/home-bg2.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home-bg2.jpg");
   background-size: cover;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start; }
   .home .content {
-    background: #161616;
+    background: #252424;
     height: 100vh;
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -436,25 +436,30 @@
       justify-content: space-around; }
       .home .content .inner-content .title {
         text-align: center;
-        color: #fff;
-        font-family: Helvetica; }
+        color: #fff; }
         .home .content .inner-content .title h1 {
-          font-size: 40px; }
+          font-size: 40px;
+          padding-bottom: 20px; }
+          .home .content .inner-content .title h1 .highlight {
+            color: #b3813f;
+            font-size: 65px; }
         .home .content .inner-content .title h4 {
           font-size: 20px; }
       .home .content .inner-content .details {
-        font-family: "Lato";
-        color: #4a53b3; }
+        color: #bdac99; }
+        .home .content .inner-content .details ul {
+          list-style: none; }
+          .home .content .inner-content .details ul li {
+            padding-bottom: 5px; }
       .home .content .inner-content .log-reg {
-        width: 60%;
-        font-family: "Lato";
+        width: 70%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around; }
         .home .content .inner-content .log-reg a {
-          height: 40px;
-          width: 150px;
+          height: 35px;
+          width: 120px;
           font-size: 18px;
           display: flex;
           align-items: center;
@@ -464,6 +469,23 @@
           border-radius: 5px;
           color: #fff; }
         .home .content .inner-content .log-reg .login-btn {
-          background: #2d0a93; }
+          background: #b3813f;
+          border: 3px solid #926934; }
         .home .content .inner-content .log-reg .register-btn {
-          background: #4a53b3; }
+          background: #833838;
+          border: 3px solid #926934; }
+  .home .details {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 auto;
+    height: 25%; }
+    .home .details .details-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .home .details .details-content .details-list {
+        list-style: none; }
+        .home .details .details-content .details-list li {
+          padding-bottom: 15px;
+          font-size: 20px; }

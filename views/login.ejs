@@ -1,10 +1,10 @@
 <div class="container">
   <div class="content">
-    <div class="inner-content login-content">
+    <div class="inner-content login-container">
       <div class="title">
         <h1>Login</h1>
       </div>
-      <div class="details">
+      <div class="form-content">
         <%- include('./partials/messages'); %>
         <form action="/users/login" method="POST">
           <div class="form-group">
@@ -38,6 +38,21 @@
           REGISTER
         </a>
       </div>
+    </div>
+  </div>
+  <div class="details">
+    <div class="details-content">
+      <p>
+        Sign up for FREE to easily keep track of your job applications.
+      </p>
+      <svg height="5" width="100">
+        <line x1="0" x2="100" style="stroke:rgb(27, 26, 26); stroke-width:4" />
+      </svg>
+      <ul class="details-list">
+        <li>Stay organized by simply (add, edit or remove) any job listing.</li>
+        <li>Update each listing as you proceed in the job hunt.</li>
+        <li>Track your progress with analytical feedback.</li>
+      </ul>
     </div>
   </div>
 </div>

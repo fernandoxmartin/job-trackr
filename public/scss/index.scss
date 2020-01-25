@@ -6,19 +6,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato";
 }
 
 .home {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/home-bg2.jpg");
   background-size: cover;
   @include flex-center(flex-start);
   .content {
-    background: #161616;
+    background: #252424;
     height: 100vh;
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,25 +35,33 @@
       .title {
         text-align: center;
         color: #fff;
-        font-family: Helvetica;
         h1 {
           font-size: 40px;
+          padding-bottom: 20px;
+          .highlight {
+            color: #b3813f;
+            font-size: 65px;
+          }
         }
         h4 {
           font-size: 20px;
         }
       }
       .details {
-        font-family: "Lato";
-        color: #4a53b3;
+        color: #bdac99;
+        ul {
+          list-style: none;
+          li {
+            padding-bottom: 5px;
+          }
+        }
       }
       .log-reg {
-        width: 60%;
-        font-family: "Lato";
+        width: 70%;
         @include flex-center(space-around);
         a {
-          height: 40px;
-          width: 150px;
+          height: 35px;
+          width: 120px;
           font-size: 18px;
           display: flex;
           align-items: center;
@@ -63,10 +72,31 @@
           color: #fff;
         }
         .login-btn {
-          background: #2d0a93;
+          background: #b3813f;
+          border: 3px solid #926934;
         }
         .register-btn {
-          background: #4a53b3;
+          background: #833838; //#c2a175;
+          border: 3px solid #926934;
+        }
+      }
+    }
+  }
+  .details {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 auto;
+    height: 25%;
+    .details-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .details-list {
+        list-style: none;
+        li {
+          padding-bottom: 15px;
+          font-size: 20px;
         }
       }
     }

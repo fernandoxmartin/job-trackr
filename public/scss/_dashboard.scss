@@ -2,10 +2,10 @@
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 20% 80%;
-  font-family: "Lato";
+  grid-template-columns: 25% 75%;
+
   .dash-left {
-    background: #161616; //#2d0a93;
+    background: #252424; //#2d0a93;
     .header {
       display: flex;
       align-items: center;
@@ -14,8 +14,8 @@
       height: 20vh;
       margin: 0 auto;
       font-size: 25px;
-      color: #6068c0;
-      border-bottom: 1px solid #4a53b3;
+      color: #b3813f;
+      border-bottom: 1px solid #b3813f;
     }
     .dash-user {
       height: 20%;
@@ -24,8 +24,7 @@
       justify-content: space-around;
       align-items: center;
       h1 {
-        font-family: "Lato";
-        color: #e2dcff;
+        color: #d6cec3;
       }
     }
     .logout-btn {
@@ -34,7 +33,6 @@
       }
       height: 35px;
       width: 25%;
-      font-family: "Lato";
       font-size: 14px;
       border: 3px solid #e7433d;
       background: #e4302a;
@@ -49,20 +47,19 @@
   }
 }
 .dash-right {
-  background: #260c72; //#989acc;
+  @include dashBg; //#b3813f; //#260c72; //#989acc;
   .dash-right-overview {
     height: 15vh;
     width: 95%;
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 10px;
-    background: #989acc; //#e6e7ee;
+    @include dashContainerBg; //#c9a475; //#989acc; //#e6e7ee;
     @include flex-center(space-around);
     .overview {
       height: 80%;
       width: 100%;
       font-size: 15px;
-      font-family: "Lato";
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -70,22 +67,22 @@
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
-        border-right: 1px solid #ccc;
+        border-right: 1px solid rgb(120, 120, 120);
       }
       .total-applications {
-        color: #371c86;
+        color: #b3813f;
         font-size: 20px;
       }
       .total-interviews {
-        color: #0000dd;
+        color: #b3813f;
         font-size: 20px;
       }
       .total-offers {
-        color: #5cb85c;
+        color: #b3813f;
         font-size: 20px;
       }
       .total-denied {
-        color: #e7433d;
+        color: #b3813f;
         font-size: 20px;
       }
     }
@@ -100,7 +97,7 @@
     .dash-applications {
       width: 63%;
       height: 100%;
-      background: #989acc;
+      @include dashContainerBg;
       border-radius: 10px;
       .application-container {
         height: 100%;
@@ -115,9 +112,8 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid rgb(56, 56, 56);
+          border-bottom: 1px solid rgb(120, 120, 120);
           .application-title {
-            font-family: "Lato";
             font-size: 30px;
             padding: 20px;
             text-transform: uppercase;
@@ -129,9 +125,8 @@
             width: 10%;
             color: #fff;
             margin: 10px;
-            border: 3px solid #4c2fa1;
-            background: #371c86;
-            font-family: "Lato";
+            border: 3px solid #a37b46; //#4c2fa1;
+            background: #b3813f; //#371c86;
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 1px;
@@ -149,7 +144,6 @@
           align-content: center;
           padding-top: 20px;
           .title {
-            font-family: "Lato";
             font-size: 15px;
             font-weight: bolder;
             color: rgb(58, 58, 58);
@@ -168,10 +162,10 @@
           border-radius: 5px;
           background: #e6e7ee;
           .job-color {
-            background: #371c86;
+            background: #b3813f;
+            width: 100%;
           }
           li {
-            font-family: "Lato";
             list-style: none;
             text-transform: lowercase;
             text-align: center;
@@ -204,7 +198,7 @@
     .dash-summary {
       width: 35%;
       height: 100%;
-      background: #989acc;
+      @include dashContainerBg; //#989acc;
       border-radius: 10px;
       .dash-summary-container {
         width: 100%;
@@ -212,20 +206,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .summary-header {
           width: 95%;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          padding-bottom: 50px;
           .summary-title {
             width: 95%;
             margin: 0 auto;
             font-size: 30px;
-            font-family: "Lato";
             text-transform: uppercase;
             padding: 20px;
-            border-bottom: 1px solid rgb(56, 56, 56);
+            border-bottom: 1px solid rgb(120, 120, 120);
           }
         }
       }
@@ -262,7 +257,6 @@
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
-    font-family: "Lato";
     .form-group-add {
       display: flex;
       flex-direction: column;
@@ -283,10 +277,11 @@
     }
     .add {
       color: #fff;
-      border: 3px solid #4c2fa1;
-      background: #371c86;
+      border: 3px solid #a37b46;
+      background: #b3813f;
       width: 20%;
       height: 30%;
+      cursor: pointer;
     }
   }
 }
@@ -307,7 +302,6 @@
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
-    font-family: "Lato";
     .form-group-edit {
       display: flex;
       flex-direction: column;
@@ -327,10 +321,11 @@
     }
     .edit {
       color: #fff;
-      border: 3px solid #4c2fa1;
-      background: #371c86;
+      border: 3px solid #a37b46;
+      background: #b3813f;
       width: 20%;
       height: 20%;
+      cursor: pointer;
     }
   }
 }
