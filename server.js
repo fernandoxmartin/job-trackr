@@ -4,11 +4,12 @@ const passport = require("passport");
 const flash = require("connect-flash");
 const session = require("express-session");
 const expressLayouts = require("express-ejs-layouts");
+require("dotenv").config();
 const app = express();
 
 require("./config/passport")(passport);
 
-const db = require("./config/keys").MongoURI;
+const db = process.env.Mongo_URI;
 mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected!"))
