@@ -1,4 +1,5 @@
-const DeleteJob = id => {
+const DeleteJob = () => {
+  const id = document.querySelector("#delete-modal").getAttribute("data-id");
   const url = `http://localhost:5000/dashboard/${id}`;
   const job = document.getElementById(id);
   axios.delete(url).then(res => {

@@ -3,7 +3,6 @@ const chart = (totalInt, totalOff, totalDen) => {
 
   const data = [];
   data.push(totalInt.textContent, totalOff.textContent, totalDen.textContent);
-  console.log(data);
 
   const myDoughnutChart = new Chart(myChart, {
     type: "doughnut",

@@ -13,10 +13,14 @@ modalBtns.forEach(function(btn) {
 window.onclick = function(e) {
   const add = document.querySelector("#add-modal");
   const edit = document.querySelector("#edit-modal");
+  const remove = document.querySelector("#delete-modal");
   if (e.target === add) {
     add.classList.toggle("show-modal");
   }
   if (e.target === edit) {
     edit.classList.toggle("show-modal");
+  }
+  if (e.target === remove) {
+    remove.classList.toggle("show-modal");
   }
 };

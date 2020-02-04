@@ -3,7 +3,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: 25% 75%;
-
   .dash-left {
     background: #252424; //#2d0a93;
     .header {
@@ -47,14 +46,14 @@
   }
 }
 .dash-right {
-  @include dashBg; //#b3813f; //#260c72; //#989acc;
+  @include dashBg;
   .dash-right-overview {
     height: 15vh;
     width: 95%;
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 10px;
-    @include dashContainerBg; //#c9a475; //#989acc; //#e6e7ee;
+    @include dashContainerBg;
     @include flex-center(space-around);
     .overview {
       height: 80%;
@@ -92,7 +91,6 @@
     width: 95%;
     margin: 0 auto;
     padding-top: 30px;
-
     @include flex-center(space-between);
     .dash-applications {
       width: 63%;
@@ -118,7 +116,6 @@
             padding: 20px;
             text-transform: uppercase;
           }
-
           .add-btn {
             background: transparent;
             height: 40px;
@@ -135,7 +132,6 @@
             transition: 0.2s all;
           }
         }
-
         .row-title {
           width: 95%;
           margin: 0 auto;
@@ -206,7 +202,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
         .summary-header {
           width: 95%;
           display: flex;
@@ -227,7 +222,6 @@
     }
   }
 }
-
 .modal {
   position: fixed;
   left: 0;
@@ -239,97 +233,56 @@
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-
-.add-modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 20%;
-  height: 30%;
-  border-radius: 0.5rem;
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    .form-group-add {
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 20%;
+    height: 30%;
+    border-radius: 0.5rem;
+    .form {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
       height: 100%;
-      width: 100%;
-      label {
-        text-transform: uppercase;
-        font-weight: bolder;
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+        label {
+          text-transform: uppercase;
+          font-weight: bolder;
+        }
+        input {
+          border: none;
+          background: #ccc;
+          height: 30%;
+          width: 80%;
+        }
+        #status {
+          height: 15%;
+          width: 80%;
+          background: #ccc;
+        }
       }
-      input {
-        border: none;
-        background: #ccc;
-        height: 30%;
-        width: 80%;
+      .form-button {
+        color: #fff;
+        border: 3px solid #a37b46;
+        background: #b3813f;
+        width: 60px;
+        height: 40px;
+        cursor: pointer;
       }
-    }
-    .add {
-      color: #fff;
-      border: 3px solid #a37b46;
-      background: #b3813f;
-      width: 20%;
-      height: 30%;
-      cursor: pointer;
     }
   }
 }
-
-.edit-modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 20%;
-  height: 30%;
-  border-radius: 0.5rem;
-  .editForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    .form-group-edit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 80%;
-      width: 100%;
-      label {
-        text-transform: uppercase;
-        font-weight: bolder;
-      }
-      #status {
-        height: 15%;
-        width: 80%;
-        background: #ccc;
-      }
-    }
-    .edit {
-      color: #fff;
-      border: 3px solid #a37b46;
-      background: #b3813f;
-      width: 20%;
-      height: 20%;
-      cursor: pointer;
-    }
-  }
-}
-
 .show-modal {
   opacity: 1;
   visibility: visible;

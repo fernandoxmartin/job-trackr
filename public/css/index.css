@@ -319,83 +319,48 @@
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
-
-.add-modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 20%;
-  height: 30%;
-  border-radius: 0.5rem; }
-  .add-modal-content form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%; }
-    .add-modal-content form .form-group-add {
+  .modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 20%;
+    height: 30%;
+    border-radius: 0.5rem; }
+    .modal .modal-content .form {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      height: 100%;
-      width: 100%; }
-      .add-modal-content form .form-group-add label {
-        text-transform: uppercase;
-        font-weight: bolder; }
-      .add-modal-content form .form-group-add input {
-        border: none;
-        background: #ccc;
-        height: 30%;
-        width: 80%; }
-    .add-modal-content form .add {
-      color: #fff;
-      border: 3px solid #a37b46;
-      background: #b3813f;
-      width: 20%;
-      height: 30%;
-      cursor: pointer; }
-
-.edit-modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 20%;
-  height: 30%;
-  border-radius: 0.5rem; }
-  .edit-modal-content .editForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%; }
-    .edit-modal-content .editForm .form-group-edit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      height: 80%;
-      width: 100%; }
-      .edit-modal-content .editForm .form-group-edit label {
-        text-transform: uppercase;
-        font-weight: bolder; }
-      .edit-modal-content .editForm .form-group-edit #status {
-        height: 15%;
-        width: 80%;
-        background: #ccc; }
-    .edit-modal-content .editForm .edit {
-      color: #fff;
-      border: 3px solid #a37b46;
-      background: #b3813f;
-      width: 20%;
-      height: 20%;
-      cursor: pointer; }
+      height: 100%; }
+      .modal .modal-content .form .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%; }
+        .modal .modal-content .form .form-group label {
+          text-transform: uppercase;
+          font-weight: bolder; }
+        .modal .modal-content .form .form-group input {
+          border: none;
+          background: #ccc;
+          height: 30%;
+          width: 80%; }
+        .modal .modal-content .form .form-group #status {
+          height: 15%;
+          width: 80%;
+          background: #ccc; }
+      .modal .modal-content .form .form-button {
+        color: #fff;
+        border: 3px solid #a37b46;
+        background: #b3813f;
+        width: 60px;
+        height: 40px;
+        cursor: pointer; }
 
 .show-modal {
   opacity: 1;
@@ -472,7 +437,7 @@
           background: #b3813f;
           border: 3px solid #926934; }
         .home .content .inner-content .log-reg .register-btn {
-          background: #833838;
+          background: #252424;
           border: 3px solid #926934; }
   .home .details {
     color: #ffffff;
