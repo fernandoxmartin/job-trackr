@@ -1,6 +1,6 @@
 const DeleteJob = () => {
   const id = document.querySelector("#delete-modal").getAttribute("data-id");
-  const url = `http://localhost:5000/dashboard/${id}`;
+  const url = `/dashboard/${id}`;
   const job = document.getElementById(id);
   axios.delete(url).then(res => {
     console.log(res);
@@ -10,7 +10,7 @@ const DeleteJob = () => {
 
 const EditJob = () => {
   const id = document.querySelector("#edit-modal").getAttribute("data-id");
-  const url = `http://localhost:5000/dashboard/${id}`;
+  const url = `/dashboard/${id}`;
   const status = document.querySelector("#status").value;
 
   axios.put(url, { status: status }).then(res => {
