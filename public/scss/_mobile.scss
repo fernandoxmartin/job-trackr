@@ -1,0 +1,126 @@
+@media only screen and (max-width: 800px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .content {
+      height: 40vh;
+      width: 100%;
+      .inner-content {
+        height: 100%;
+      }
+    }
+    .details {
+      font-size: 16px;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .details-content {
+        height: 40%;
+        width: 90%;
+        .details-list {
+          li {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .content {
+      height: 100vh;
+      width: 100%;
+    }
+    .details {
+      display: none;
+    }
+  }
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .dash-left {
+      width: 100%;
+      height: 25vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .header {
+        height: 50%;
+      }
+      .dash-user {
+        height: 50%;
+        h1 {
+          font-size: 25px;
+        }
+      }
+    }
+    .dash-right {
+      .dash-right-overview {
+        height: 10vh;
+        .overview {
+          font-size: 10px;
+        }
+      }
+      .dash-right-info {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        .dash-applications {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 20px;
+          .application-container {
+            .application-header {
+              .application-title {
+                font-size: 20px;
+              }
+              .add-btn {
+                width: 20%;
+              }
+            }
+            li {
+              font-size: 14px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .job-links {
+              button {
+                width: 100%;
+                font-size: 18px;
+              }
+            }
+            .row {
+              &:last-child {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+        .dash-summary {
+          width: 100%;
+          height: 40vh;
+          margin-bottom: 20px;
+          .dash-summary-container {
+            .summary-header {
+              .summary-title {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .modal {
+    .modal-content {
+      width: 70%;
+      height: 30%;
+    }
+  }
+}

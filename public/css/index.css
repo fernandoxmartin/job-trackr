@@ -410,12 +410,6 @@
             font-size: 65px; }
         .home .content .inner-content .title h4 {
           font-size: 20px; }
-      .home .content .inner-content .details {
-        color: #bdac99; }
-        .home .content .inner-content .details ul {
-          list-style: none; }
-          .home .content .inner-content .details ul li {
-            padding-bottom: 5px; }
       .home .content .inner-content .log-reg {
         width: 70%;
         display: flex;
@@ -454,3 +448,84 @@
         .home .details .details-content .details-list li {
           padding-bottom: 15px;
           font-size: 20px; }
+
+@media only screen and (max-width: 800px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    .home .content {
+      height: 40vh;
+      width: 100%; }
+      .home .content .inner-content {
+        height: 100%; }
+    .home .details {
+      font-size: 16px;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .home .details .details-content {
+        height: 40%;
+        width: 90%; }
+        .home .details .details-content .details-list li {
+          font-size: 14px; }
+  .container .content {
+    height: 100vh;
+    width: 100%; }
+  .container .details {
+    display: none; }
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; }
+    .dashboard .dash-left {
+      width: 100%;
+      height: 25vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .dashboard .dash-left .header {
+        height: 50%; }
+      .dashboard .dash-left .dash-user {
+        height: 50%; }
+        .dashboard .dash-left .dash-user h1 {
+          font-size: 25px; }
+    .dashboard .dash-right .dash-right-overview {
+      height: 10vh; }
+      .dashboard .dash-right .dash-right-overview .overview {
+        font-size: 10px; }
+    .dashboard .dash-right .dash-right-info {
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%; }
+      .dashboard .dash-right .dash-right-info .dash-applications {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .application-header .application-title {
+          font-size: 20px; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .application-header .add-btn {
+          width: 20%; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container li {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-links button {
+          width: 100%;
+          font-size: 18px; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .row:last-child {
+          margin-bottom: 20px; }
+      .dashboard .dash-right .dash-right-info .dash-summary {
+        width: 100%;
+        height: 40vh;
+        margin-bottom: 20px; }
+        .dashboard .dash-right .dash-right-info .dash-summary .dash-summary-container .summary-header .summary-title {
+          font-size: 20px; }
+  .modal .modal-content {
+    width: 70%;
+    height: 30%; } }

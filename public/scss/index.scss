@@ -47,15 +47,6 @@
           font-size: 20px;
         }
       }
-      .details {
-        color: #bdac99;
-        ul {
-          list-style: none;
-          li {
-            padding-bottom: 5px;
-          }
-        }
-      }
       .log-reg {
         width: 70%;
         @include flex-center(space-around);
@@ -102,3 +93,5 @@
     }
   }
 }
+
+@import "./mobile.scss";
