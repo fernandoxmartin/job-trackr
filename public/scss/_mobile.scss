@@ -83,19 +83,24 @@
                 width: 20%;
               }
             }
-            li {
-              font-size: 14px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-            .job-links {
-              button {
-                width: 100%;
-                font-size: 18px;
-              }
-            }
             .row {
+              .job {
+                grid-template-columns: 1% 1fr 1fr 1fr 15%;
+                li {
+                  font-size: 13px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                .job-links {
+                  .edit-job-btn {
+                    font-size: 13px;
+                  }
+                  .delete-job-btn {
+                    font-size: 16px;
+                  }
+                }
+              }
               &:last-child {
                 margin-bottom: 20px;
               }

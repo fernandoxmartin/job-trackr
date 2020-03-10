@@ -161,7 +161,7 @@
     width: 95%;
     margin: 0 auto;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #c4c4c4;
     display: flex;
     flex-direction: row;
@@ -193,7 +193,7 @@
     height: 80vh;
     width: 95%;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -202,14 +202,20 @@
       width: 63%;
       height: 100%;
       background: #c4c4c4;
-      border-radius: 10px; }
+      border-radius: 5px; }
       .dash-right .dash-right-info .dash-applications .application-container {
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center; }
+        align-items: center;
+        overflow: auto; }
+        .dash-right .dash-right-info .dash-applications .application-container::-webkit-scrollbar {
+          width: 10px;
+          background: #9e9e9e; }
+        .dash-right .dash-right-info .dash-applications .application-container::-webkit-scrollbar-thumb {
+          background: #4e4e4e; }
         .dash-right .dash-right-info .dash-applications .application-container .application-header {
           width: 95%;
           display: flex;
@@ -239,7 +245,7 @@
           width: 95%;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 1% 1fr 1fr 1fr 0.5fr;
+          grid-template-columns: 1% 1fr 1fr 1fr 10%;
           align-content: center;
           padding-top: 20px; }
           .dash-right .dash-right-info .dash-applications .application-container .row-title .title {
@@ -252,41 +258,97 @@
           height: 50px;
           margin: 0 auto;
           margin-top: 20px;
-          display: grid;
-          grid-template-columns: 1% 1fr 1fr 1fr 0.5fr;
-          align-content: center;
-          box-shadow: 0px 0px 10px #353535;
-          border-radius: 5px;
-          background: #e6e7ee; }
-          .dash-right .dash-right-info .dash-applications .application-container .row .job-color {
-            background: #b3813f;
-            width: 100%; }
-          .dash-right .dash-right-info .dash-applications .application-container .row li {
-            list-style: none;
-            text-transform: lowercase;
-            text-align: center; }
-            .dash-right .dash-right-info .dash-applications .application-container .row li::first-letter {
-              text-transform: uppercase; }
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background: #eeeeee;
+          display: flex; }
+          .dash-right .dash-right-info .dash-applications .application-container .row .job {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1% 1fr 1fr 1fr;
+            grid-template-rows: 100%; }
+            .dash-right .dash-right-info .dash-applications .application-container .row .job .job-color {
+              background: #b3813f; }
+            .dash-right .dash-right-info .dash-applications .application-container .row .job li {
+              list-style: none;
+              text-transform: capitalize;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: "Poppins";
+              font-size: 15px; }
           .dash-right .dash-right-info .dash-applications .application-container .row .job-links {
             display: flex;
             justify-content: space-evenly;
-            align-items: center; }
+            align-items: center;
+            width: 10%; }
             .dash-right .dash-right-info .dash-applications .application-container .row .job-links .edit-job-btn {
-              color: #8b8b8b; }
+              font-size: 18px; }
             .dash-right .dash-right-info .dash-applications .application-container .row .job-links .delete-job-btn {
-              color: #e7433d; }
+              font-size: 20px; }
             .dash-right .dash-right-info .dash-applications .application-container .row .job-links button {
-              width: 30%;
+              color: #646464;
               border: none;
               cursor: pointer;
-              border-radius: 5px;
-              font-size: 25px;
               background: transparent; }
+        .dash-right .dash-right-info .dash-applications .application-container .job-info-container {
+          max-height: 0;
+          min-height: 0;
+          overflow: hidden;
+          transition: 0.2s ease;
+          width: 95%;
+          background: #eeeeee;
+          display: grid;
+          grid-template-columns: 0.9% 99.1%;
+          border-bottom-right-radius: 5px;
+          border-top: 1px solid #cccccc; }
+          .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-color {
+            height: 100%;
+            background: #b3813f; }
+          .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            align-items: center;
+            padding: 20px 0px 20px 50px;
+            height: 100%; }
+            .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-left {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              height: 100%; }
+              .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-left .info {
+                width: 100%; }
+                .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-left .info h2 {
+                  font-size: 14px; }
+                .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-left .info p {
+                  font-size: 16px; }
+            .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right {
+              height: 100%; }
+              .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                height: 100%; }
+                .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right form .check-group {
+                  width: 50%;
+                  display: grid;
+                  grid-template-columns: 1fr 4fr;
+                  align-items: center;
+                  justify-content: space-evenly; }
+                  .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right form .check-group input {
+                    height: 15px;
+                    width: 15px; }
     .dash-right .dash-right-info .dash-summary {
       width: 35%;
       height: 100%;
       background: #c4c4c4;
-      border-radius: 10px; }
+      border-radius: 5px; }
       .dash-right .dash-right-info .dash-summary .dash-summary-container {
         width: 100%;
         height: 100%;
@@ -367,6 +429,21 @@
   visibility: visible;
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9); } }
+
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0; }
+  25% {
+    height: 0;
+    width: 10px; }
+  50% {
+    height: 10px;
+    width: 10px; } }
 
 * {
   margin: 0;
@@ -510,14 +587,17 @@
           font-size: 20px; }
         .dashboard .dash-right .dash-right-info .dash-applications .application-container .application-header .add-btn {
           width: 20%; }
-        .dashboard .dash-right .dash-right-info .dash-applications .application-container li {
-          font-size: 14px;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-        .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-links button {
-          width: 100%;
-          font-size: 18px; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job {
+          grid-template-columns: 1% 1fr 1fr 1fr 15%; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job li {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job .job-links .edit-job-btn {
+            font-size: 13px; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job .job-links .delete-job-btn {
+            font-size: 16px; }
         .dashboard .dash-right .dash-right-info .dash-applications .application-container .row:last-child {
           margin-bottom: 20px; }
       .dashboard .dash-right .dash-right-info .dash-summary {

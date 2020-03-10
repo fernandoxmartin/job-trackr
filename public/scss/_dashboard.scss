@@ -52,7 +52,7 @@
     width: 95%;
     margin: 0 auto;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     @include dashContainerBg;
     @include flex-center(space-around);
     .overview {
@@ -90,13 +90,13 @@
     height: 80vh;
     width: 95%;
     margin: 0 auto;
-    padding-top: 30px;
+    padding-top: 25px;
     @include flex-center(space-between);
     .dash-applications {
       width: 63%;
       height: 100%;
       @include dashContainerBg;
-      border-radius: 10px;
+      border-radius: 5px;
       .application-container {
         height: 100%;
         width: 100%;
@@ -104,6 +104,15 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          width: 10px;
+          background: rgb(158, 158, 158);
+        }
+        &::-webkit-scrollbar-thumb {
+          background: rgb(78, 78, 78);
+        }
+
         .application-header {
           width: 95%;
           display: flex;
@@ -136,7 +145,7 @@
           width: 95%;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 1% 1fr 1fr 1fr 0.5fr;
+          grid-template-columns: 1% 1fr 1fr 1fr 10%;
           align-content: center;
           padding-top: 20px;
           .title {
@@ -151,41 +160,108 @@
           height: 50px;
           margin: 0 auto;
           margin-top: 20px;
-          display: grid;
-          grid-template-columns: 1% 1fr 1fr 1fr 0.5fr;
-          align-content: center;
-          box-shadow: 0px 0px 10px rgb(53, 53, 53);
-          border-radius: 5px;
-          background: #e6e7ee;
-          .job-color {
-            background: #b3813f;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          background: #eeeeee;
+          display: flex;
+          .job {
+            height: 100%;
             width: 100%;
-          }
-          li {
-            list-style: none;
-            text-transform: lowercase;
-            text-align: center;
-            &::first-letter {
-              text-transform: uppercase;
+            display: grid;
+            grid-template-columns: 1% 1fr 1fr 1fr;
+            grid-template-rows: 100%;
+            .job-color {
+              background: #b3813f;
+            }
+            li {
+              list-style: none;
+              text-transform: capitalize;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: "Poppins";
+              font-size: 15px;
             }
           }
           .job-links {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            width: 10%;
             .edit-job-btn {
-              color: rgb(139, 139, 139);
+              font-size: 18px;
             }
             .delete-job-btn {
-              color: #e7433d;
+              font-size: 20px;
             }
             button {
-              width: 30%;
+              color: rgb(100, 100, 100);
               border: none;
               cursor: pointer;
-              border-radius: 5px;
-              font-size: 25px;
               background: transparent;
+            }
+          }
+        }
+        .job-info-container {
+          max-height: 0;
+          min-height: 0;
+          overflow: hidden;
+          transition: 0.2s ease;
+          width: 95%;
+          background: #eeeeee;
+          display: grid;
+          grid-template-columns: 0.9% 99.1%;
+          border-bottom-right-radius: 5px;
+          border-top: 1px solid #cccccc;
+          .job-color {
+            height: 100%;
+            background: #b3813f;
+          }
+          .job-info {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            align-items: center;
+            padding: 20px 0px 20px 50px;
+            height: 100%;
+            .info-left {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              height: 100%;
+              .info {
+                width: 100%;
+                h2 {
+                  font-size: 14px;
+                }
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+            .info-right {
+              height: 100%;
+              form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                height: 100%;
+                .check-group {
+                  width: 50%;
+                  display: grid;
+                  grid-template-columns: 1fr 4fr;
+                  align-items: center;
+                  justify-content: space-evenly;
+                  input {
+                    height: 15px;
+                    width: 15px;
+                  }
+                }
+              }
             }
           }
         }
@@ -195,7 +271,7 @@
       width: 35%;
       height: 100%;
       @include dashContainerBg; //#989acc;
-      border-radius: 10px;
+      border-radius: 5px;
       .dash-summary-container {
         width: 100%;
         height: 100%;
@@ -288,4 +364,24 @@
   visibility: visible;
   transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  25% {
+    height: 0;
+    width: 10px;
+  }
+  50% {
+    height: 10px;
+    width: 10px;
+  }
 }

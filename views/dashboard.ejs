@@ -40,7 +40,7 @@
               data-modal="add-modal"
               onclick="OpenAddModal()"
             >
-              <i class="fas fa-plus"></i> Job
+              <i class="fas fa-plus"></i>
             </button>
           </div>
 
@@ -52,22 +52,54 @@
           </div>
           <% jobs.forEach(function(job){ %>
           <div class="row" id="<%=job._id%>">
-            <li class="job-color"></li>
-            <li class="job-position"><%=job.position%></li>
-            <li class="job-company"><%=job.company%></li>
-            <li class="job-status"><%=job.status%></li>
-
+            <ul class="job">
+              <li class="job-color"></li>
+              <li class="job-position"><%=job.position%></li>
+              <li class="job-company"><%=job.company%></li>
+              <li class="job-status"><%=job.status%></li>
+            </ul>
             <div class="job-links">
               <button
-                class="modal-btn edit-btn fas fa-edit"
+                class="modal-btn edit-job-btn fas fa-pen"
                 value="<%=job._id%>"
                 data-modal="edit-modal"
               ></button>
               <button
-                class="modal-btn delete-job-btn fas fa-times-circle"
+                class="modal-btn delete-job-btn fas fa-times"
                 value="<%=job._id%>"
                 data-modal="delete-modal"
               ></button>
+            </div>
+          </div>
+          <div class="job-info-container">
+            <div class="job-color"></div>
+            <div class="job-info">
+              <div class="info-left">
+                <div class="info">
+                  <h2>Submitted</h2>
+                  <p class="date"><%=job.date%></p>
+                </div>
+                <div class="info">
+                  <h2>Location</h2>
+                  <p class="location">Los Angeles, CA</p>
+                </div>
+              </div>
+              <div class="info-right">
+                <form>
+                  <div class="check-group">
+                    <input type="checkbox" id="call" />
+                    <label for="call">Contacted Back</label>
+                  </div>
+                  <div class="check-group">
+                    <input type="checkbox" id="phoneInterview" />
+                    <label for="phoneInterview">Phone Interview</label>
+                  </div>
+                  <div class="check-group">
+                    <input type="checkbox" id="onsiteInterview" />
+                    <label for="onsiteInterview">Onsite Interview</label>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
           <% }); %>
@@ -111,7 +143,7 @@
         />
       </div>
       <button type="submit" class="add form-button">
-        <i class="fas fa-plus"></i>
+        Add
       </button>
     </form>
   </div>
@@ -150,6 +182,7 @@
 </div>
 
 <script src="../public/js/modal.js"></script>
+<script src="../public/js/accordion.js"></script>
 <script src="../public/js/actions.js"></script>
 <script src="../public/js/overview.js"></script>
 <script src="../public/js/chart.js"></script>
