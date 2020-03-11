@@ -1,4 +1,11 @@
 <div class="dashboard">
+  <div class="nav">
+    <svg class="nav-button" width="40" height="25">
+      <line y1="1.5" x2="40" y2="1.5" stroke-width="3" stroke="#000" />
+      <line y1="11.5" x2="35" y2="11.5" stroke-width="3" stroke="#000" />
+      <line y1="21.5" x2="30" y2="21.5" stroke-width="3" stroke="#000" />
+    </svg>
+  </div>
   <div class="dash-left">
     <div class="header">
       <h1>Job Trackr</h1>
@@ -15,19 +22,19 @@
     <div class="dash-right-overview">
       <div class="overview applied">
         <h2>Applications</h2>
-        <h4 class="total-applications">0</h4>
+        <h4 class="total-applications total">0</h4>
       </div>
       <div class="overview interv">
         <h2>Interviews</h2>
-        <h4 class="total-interviews">0</h4>
+        <h4 class="total-interviews total">0</h4>
       </div>
       <div class="overview offers">
         <h2>Offers</h2>
-        <h4 class="total-offers">0</h4>
+        <h4 class="total-offers total">0</h4>
       </div>
       <div class="overview denied">
         <h2>Denied</h2>
-        <h4 class="total-denied">0</h4>
+        <h4 class="total-denied total">0</h4>
       </div>
     </div>
     <div class="dash-right-info">
@@ -192,6 +199,7 @@
 </div>
 
 <script src="../public/js/modal.js"></script>
+<script src="../public/js/nav.js"></script>
 <script src="../public/js/accordion.js"></script>
 <script src="../public/js/actions.js"></script>
 <script src="../public/js/overview.js"></script>

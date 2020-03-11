@@ -14,6 +14,10 @@ const chart = (totalInt, totalOff, totalDen) => {
           backgroundColor: ["#b3813f", "#755934", "#555555"]
         }
       ]
+    },
+    options: {
+      maintainsAspectRatio: true,
+      responsive: true
     }
   });
 };

@@ -118,6 +118,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: 25% 75%; }
+  .dashboard .nav {
+    display: none; }
   .dashboard .dash-left {
     background: #252424; }
     .dashboard .dash-left .header {
@@ -135,13 +137,14 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      align-items: center; }
+      align-items: center;
+      text-transform: capitalize; }
       .dashboard .dash-left .dash-user h1 {
         color: #d6cec3; }
     .dashboard .dash-left .logout-btn {
       height: 35px;
       width: 25%;
-      font-size: 14px;
+      font-size: 12px;
       border: 3px solid #e7433d;
       background: #e4302a;
       text-decoration: none;
@@ -152,7 +155,7 @@
       transition: 0.2s all;
       text-transform: uppercase; }
       .dashboard .dash-left .logout-btn .fas {
-        font-size: 16px; }
+        font-size: 14px; }
 
 .dash-right {
   background: #ebebeb; }
@@ -304,6 +307,8 @@
           grid-template-columns: 0.9% 99.1%;
           border-bottom-right-radius: 5px;
           border-top: 1px solid #cccccc; }
+          .dash-right .dash-right-info .dash-applications .application-container .job-info-container:last-child {
+            margin-bottom: 20px; }
           .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-color {
             height: 100%;
             background: #b3813f; }
@@ -526,6 +531,32 @@
           padding-bottom: 15px;
           font-size: 20px; }
 
+@media only screen and (max-width: 1100px) {
+  .dashboard .dash-left .header {
+    font-size: 20px; }
+  .dashboard .dash-left .dash-user {
+    font-size: 10px; }
+  .dashboard .dash-left .logout-btn {
+    width: 45%; }
+    .dashboard .dash-left .logout-btn .fas {
+      font-size: 12px; }
+  .dashboard .dash-right .dash-right-info {
+    flex-direction: column; }
+    .dashboard .dash-right .dash-right-info .dash-applications {
+      width: 100%;
+      height: 60%;
+      margin-bottom: 20px; }
+      .dashboard .dash-right .dash-right-info .dash-applications .application-container .application-header .add-btn {
+        width: 20%; }
+    .dashboard .dash-right .dash-right-info .dash-summary {
+      width: 100%;
+      height: 40%; }
+      .dashboard .dash-right .dash-right-info .dash-summary .dash-summary-container {
+        height: 100%;
+        width: 70%;
+        display: grid;
+        grid-template-columns: 2fr 1fr; } }
+
 @media only screen and (max-width: 800px) {
   .home {
     display: flex;
@@ -559,22 +590,39 @@
     flex-direction: column;
     width: 100%;
     height: 100%; }
+    .dashboard .nav {
+      display: block;
+      padding: 20px;
+      z-index: 10000;
+      background: #ebebeb; }
+      .dashboard .nav svg {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
     .dashboard .dash-left {
       width: 100%;
-      height: 25vh;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around; }
+      justify-content: space-around;
+      position: absolute;
+      transform: translateY(-100%);
+      transition: all 0.3s ease; }
       .dashboard .dash-left .header {
         height: 50%; }
       .dashboard .dash-left .dash-user {
         height: 50%; }
         .dashboard .dash-left .dash-user h1 {
           font-size: 25px; }
+      .dashboard .dash-left .logout-btn {
+        width: 25%; }
     .dashboard .dash-right .dash-right-overview {
       height: 10vh; }
       .dashboard .dash-right .dash-right-overview .overview {
         font-size: 10px; }
+        .dashboard .dash-right .dash-right-overview .overview .total {
+          font-size: 15px; }
     .dashboard .dash-right .dash-right-info {
       flex-direction: column;
       justify-content: space-around;
@@ -588,24 +636,60 @@
         .dashboard .dash-right .dash-right-info .dash-applications .application-container .application-header .add-btn {
           width: 20%; }
         .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job {
-          grid-template-columns: 1% 1fr 1fr 1fr 15%; }
+          grid-template-columns: 1% 1fr 1fr 1fr; }
           .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job li {
             font-size: 13px;
             display: flex;
             align-items: center;
             justify-content: center; }
-          .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job .job-links .edit-job-btn {
-            font-size: 13px; }
-          .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job .job-links .delete-job-btn {
-            font-size: 16px; }
-        .dashboard .dash-right .dash-right-info .dash-applications .application-container .row:last-child {
-          margin-bottom: 20px; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job-links {
+          width: 15%;
+          justify-content: space-around; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job-links .edit-job-btn {
+            font-size: 12px; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .row .job-links .delete-job-btn {
+            font-size: 14px; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-left {
+          height: 80%; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-left .info h2 {
+            font-size: 14px; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-left .info p {
+            font-size: 14px; }
+        .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right {
+          height: 100%; }
+          .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%; }
+            .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right form .check-group {
+              width: 80%;
+              display: grid;
+              grid-template-columns: 1fr 4fr;
+              align-items: center;
+              justify-content: space-evenly; }
+              .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right form .check-group input {
+                height: 15px;
+                width: 15px; }
+              .dashboard .dash-right .dash-right-info .dash-applications .application-container .job-info-container .job-info .info-right form .check-group label {
+                font-size: 14px; }
       .dashboard .dash-right .dash-right-info .dash-summary {
         width: 100%;
         height: 40vh;
         margin-bottom: 20px; }
-        .dashboard .dash-right .dash-right-info .dash-summary .dash-summary-container .summary-header .summary-title {
-          font-size: 20px; }
+        .dashboard .dash-right .dash-right-info .dash-summary .dash-summary-container {
+          width: 80%;
+          height: 100%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .dashboard .dash-right .dash-right-info .dash-summary .dash-summary-container .summary-header .summary-title {
+            font-size: 20px; }
   .modal .modal-content {
     width: 70%;
     height: 30%; } }
+
+.nav-open {
+  transform: translateY(0%) !important; }
