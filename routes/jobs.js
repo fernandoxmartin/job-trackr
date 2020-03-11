@@ -6,11 +6,13 @@ const User = require("../models/User");
 router.post("/", (req, res) => {
   const position = req.body.position;
   const company = req.body.company;
+  const location = req.body.location;
   const userId = req.user.id;
 
   const newJob = new Job({
     position,
     company,
+    location,
     user: userId
   });
 

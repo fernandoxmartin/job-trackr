@@ -81,7 +81,7 @@
                 </div>
                 <div class="info">
                   <h2>Location</h2>
-                  <p class="location">Los Angeles, CA</p>
+                  <p class="location"><%=job.location%></p>
                 </div>
               </div>
               <div class="info-right">
@@ -140,6 +140,16 @@
           name="company"
           class="form-control"
           placeholder="Enter Company Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input
+          type="location"
+          id="location"
+          name="location"
+          class="form-control"
+          placeholder="Enter City Location"
         />
       </div>
       <button type="submit" class="add form-button">

@@ -14,6 +14,10 @@ const JobSchema = new Schema({
     type: String,
     default: "applied"
   },
+  location: {
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     default: Date.now
