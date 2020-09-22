@@ -2,7 +2,7 @@
 
 A nicer way to keep track of your job applications!
 
-![JobTrackr](https://raw.githubusercontent.com/fernandoxmartin/react-portfolio/master/src/images/1a.png)
+![JobTrackr](https://raw.githubusercontent.com/fernandoxmartin/react-portfolio/master/src/images/job-desktop.png)
 
 
 Built with: 
